@@ -13,6 +13,7 @@ The primary challenge in modeling body motion and emotion lies in effectively ca
 - **Hierarchical Structure**: Organizes the latent space into different levels, capturing both global and fine-grained details of motion.
 - **Conditional Inputs**: Ensures that the latent space is aligned with specific conditions like emotions and intensity, allowing for controlled and targeted generation.
 - **Disentanglement**: Aims to separate different factors in the data, such as emotion versus general motion, making it easier to manipulate and understand the latent space.
+![SyntheticDataGenerationVAE-ezgif com-resize](https://github.com/user-attachments/assets/aa08b263-2e73-4746-b330-6860a8ef8067)
 
 ## 3. What This Improves Compared to Normal VAE
 
