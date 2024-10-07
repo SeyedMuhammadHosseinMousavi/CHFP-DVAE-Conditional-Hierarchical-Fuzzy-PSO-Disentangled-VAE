@@ -1,6 +1,4 @@
-# Conditional-Hierarchical-Fuzzy-PSO-Disentangled-VAE
 # Synthetic Data Generation by Hierarchical Fuzzy PSO Disentangled VAE for Emotional Body Motion Data
-# Enhanced VAE Model for Body Motion and Emotion
 
 ## 1. Challenge
 
