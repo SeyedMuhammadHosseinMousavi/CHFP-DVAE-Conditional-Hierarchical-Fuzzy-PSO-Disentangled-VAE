@@ -22,3 +22,5 @@ Compared to a standard VAE, this enhanced model significantly improves the gener
 ## 4. How It Works on Body Motion and Emotion
 
 The model processes input data by first encoding it into a latent space influenced by additional conditions such as emotion and intensity. During training, the encoder learns to map these conditions along with the motion data into a structured latent space. The decoder then reconstructs the motion data from these latent representations, ensuring that the output aligns with the given conditions. PSO optimizes the exploration of this space, while fuzzy sampling adds variability, resulting in outputs that reflect a range of realistic motions and emotional expressions. The hierarchical and conditional aspects help in generating nuanced body motions that correspond accurately to the specified emotional states, providing a rich and varied dataset for applications such as animation, virtual reality, and emotion recognition systems.
+
+https://www.researchgate.net/publication/384679510_Conditional_Hierarchical_Fuzzy_PSO_Disentangled_VAE
