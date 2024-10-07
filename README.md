@@ -1,5 +1,5 @@
-# CHFP-DVAE-Conditional-Hierarchical-Fuzzy-PSO-Disentangled-VAE
-CHFP-DVAE Conditional Hierarchical Fuzzy PSO Disentangled VAE
+# Conditional-Hierarchical-Fuzzy-PSO-Disentangled-VAE
+Synthetic Data Generation by Conditional Hierarchical Fuzzy PSO Disentangled VAE
 # Enhanced VAE Model for Body Motion and Emotion
 
 ## 1. Challenge
