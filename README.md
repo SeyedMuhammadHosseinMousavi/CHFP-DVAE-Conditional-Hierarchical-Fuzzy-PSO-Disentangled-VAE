@@ -13,7 +13,7 @@ The primary challenge in modeling body motion and emotion lies in effectively ca
 - **Disentanglement**: Aims to separate different factors in the data, such as emotion versus general motion, making it easier to manipulate and understand the latent space.
 ![SyntheticDataGenerationVAE-ezgif com-resize](https://github.com/user-attachments/assets/aa08b263-2e73-4746-b330-6860a8ef8067)
 
-## 3. What This Method Improves Compared to Normal VAE
+## 3. What Is The Improvment Compared to Vanilla VAE
 
 Compared to a standard VAE, this enhanced model significantly improves the generation of diverse and contextually appropriate outputs. By incorporating PSO, the model can explore the latent space more effectively, discovering a wider range of plausible motions and emotions. Fuzzy logic adds variability to the generated samples, making them more realistic and less deterministic. The hierarchical structure helps in better organizing the complex data, allowing the model to capture both high-level and detailed features. Conditional inputs provide a mechanism to control the emotional content of the generated samples, and disentanglement ensures that these features are cleanly separated, allowing for more interpretable and adjustable outputs.
 
