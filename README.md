@@ -1,5 +1,8 @@
 # Synthetic Data Generation by Hierarchical Fuzzy PSO Disentangled VAE for Emotional Body Motion Data
 
+### GitHub Stats
+- Total Watchers: 0
+
 ## 1. Challenge
 
 The primary challenge in modeling body motion and emotion lies in effectively capturing the complex interplay of these factors in a structured and controllable manner. Traditional VAE models often struggle to generate diverse and expressive samples, particularly when the dataset is limited in capturing the full range of emotional expressions and motion variations. The integration of multiple components such as PSO, fuzzy logic, hierarchical structure, conditional inputs, and disentanglement seeks to address these challenges by enhancing the richness and control of the generated data.
