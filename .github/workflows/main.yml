@@ -1,0 +1,26 @@
+name: Update Watchers Count
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This runs at midnight UTC every day
+  workflow_dispatch: # Allows manual trigger from the Actions tab
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Fetch watchers count
+        run: |
+          WATCHERS=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -s "https://api.github.com/repos/SeyedMuhammadHosseinMousavi/CHFP-DVAE-Conditional-Hierarchical-Fuzzy-PSO-Disentangled-VAE/subscribers" | jq '. | length')
+          echo "WATCHERS_COUNT=$WATCHERS" >> $GITHUB_ENV
+      - name: Update README
+        run: |
+          sed -i "s/Total Watchers:.*/Total Watchers: ${{ env.WATCHERS_COUNT }}/g" README.md
+      - name: Commit and push if changes
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add README.md
+          git commit -m "Updated Watchers Count" -a || echo "No changes to commit"
+          git push
