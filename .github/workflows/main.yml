@@ -2,8 +2,8 @@ name: Update Watchers Count
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # This runs at midnight UTC every day
-  workflow_dispatch: # Allows manual trigger from the Actions tab
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -12,11 +12,16 @@ jobs:
       - uses: actions/checkout@v2
       - name: Fetch watchers count
         run: |
-          WATCHERS=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -s "https://api.github.com/repos/SeyedMuhammadHosseinMousavi/CHFP-DVAE-Conditional-Hierarchical-Fuzzy-PSO-Disentangled-VAE/subscribers" | jq '. | length')
+          WATCHERS_JSON=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -s "https://api.github.com/repos/SeyedMuhammadHosseinMousavi/CHFP-DVAE-Conditional-Hierarchical-Fuzzy-PSO-Disentangled-VAE/subscribers")
+          WATCHERS=$(echo "$WATCHERS_JSON" | jq '. | length')
+          echo "WATCHERS_COUNT=$WATCHERS"
           echo "WATCHERS_COUNT=$WATCHERS" >> $GITHUB_ENV
+      - name: Display watchers count
+        run: echo "Number of Watchers: ${{ env.WATCHERS_COUNT }}"
       - name: Update README
         run: |
           sed -i "s/Total Watchers:.*/Total Watchers: ${{ env.WATCHERS_COUNT }}/g" README.md
+          cat README.md
       - name: Commit and push if changes
         run: |
           git config --global user.email "action@github.com"
