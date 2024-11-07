@@ -1,6 +1,6 @@
 # Synthetic Data Generation by Hierarchical Fuzzy PSO Disentangled VAE for Emotional Body Motion Data
 
-
+June 2024 / Lugano / Switzerland
 
 ## 1. Challenge
 
